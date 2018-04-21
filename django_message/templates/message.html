@@ -136,7 +136,9 @@
 
     <label>
         <span>留言 :</span>
-        <textarea id="message" name="message" placeholder="请输入你的建议"></textarea>
+        <textarea id="message"
+                  name="message"
+                  placeholder="请输入你的建议">{% if not form_errors.message %}{{ get_message }}{% endif %}</textarea>
         <div class="error-msg"></div>
     </label>
     <div class="success-msg"></div>
